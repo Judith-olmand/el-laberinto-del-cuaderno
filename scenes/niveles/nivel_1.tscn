@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://dbuoqcq1k61s4"]
+
+[ext_resource type="Texture2D" uid="uid://cmuptcdmyh033" path="res://assets/sprites/escenario/nivel1.png" id="1_0nom1"]
+[ext_resource type="PackedScene" path="res://scenes/objetos/paredes.tscn" id="2_0ehnl"]
+[ext_resource type="PackedScene" uid="uid://ljh85odvev4l" path="res://scenes/personajes/caballero.tscn" id="3_jiyiu"]
+[ext_resource type="PackedScene" uid="uid://rcstmrfxh6na" path="res://scenes/personajes/princesa.tscn" id="4_lkhdl"]
+
+[node name="Nivel1" type="Node2D" unique_id=224820559]
+position = Vector2(137, 259)
+metadata/_edit_group_ = true
+
+[node name="fondo" type="Sprite2D" parent="." unique_id=957180903]
+texture = ExtResource("1_0nom1")
+centered = false
+
+[node name="Paredes" parent="." unique_id=139616253 instance=ExtResource("2_0ehnl")]
+
+[node name="Caballero" parent="." unique_id=1274308613 instance=ExtResource("3_jiyiu")]
+position = Vector2(499, 840)
+scale = Vector2(1.25, 1.25)
+
+[node name="princesa" parent="." unique_id=1992143498 instance=ExtResource("4_lkhdl")]
+position = Vector2(29, -114)

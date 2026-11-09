@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://bj72ub45nautb"]
+
+[ext_resource type="Texture2D" uid="uid://daga2k1v7bahx" path="res://assets/sprites/escenario/spritesheet.png" id="1_kq7r4"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_chgtt"]
+radius = 45.0
+height = 108.0
+
+[node name="Puerta" type="Area2D" unique_id=1174644215]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=145253978]
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("1_kq7r4")
+hframes = 4
+vframes = 9
+frame = 24
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=153632397]
+shape = SubResource("CapsuleShape2D_chgtt")
