@@ -4,6 +4,8 @@
 [ext_resource type="PackedScene" path="res://scenes/objetos/paredes.tscn" id="2_0ehnl"]
 [ext_resource type="PackedScene" uid="uid://ljh85odvev4l" path="res://scenes/personajes/caballero.tscn" id="3_jiyiu"]
 [ext_resource type="PackedScene" uid="uid://rcstmrfxh6na" path="res://scenes/personajes/princesa.tscn" id="4_lkhdl"]
+[ext_resource type="PackedScene" uid="uid://82n16p3edamt" path="res://scenes/enemigos/lobo.tscn" id="5_pbyxt"]
+[ext_resource type="PackedScene" uid="uid://c8lrwo4gqq1jx" path="res://scenes/objetos/llave.tscn" id="6_xbfyf"]
 
 [node name="Nivel1" type="Node2D" unique_id=224820559]
 position = Vector2(137, 259)
@@ -21,3 +23,10 @@ scale = Vector2(1.25, 1.25)
 
 [node name="princesa" parent="." unique_id=1992143498 instance=ExtResource("4_lkhdl")]
 position = Vector2(29, -114)
+
+[node name="lobo" parent="." unique_id=1203812344 instance=ExtResource("5_pbyxt")]
+position = Vector2(930, 59)
+
+[node name="Llave" parent="." unique_id=1346416997 instance=ExtResource("6_xbfyf")]
+position = Vector2(68, 98)
+scale = Vector2(0.75, 0.75)

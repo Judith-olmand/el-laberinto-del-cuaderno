@@ -1,22 +1,85 @@
 [gd_scene format=3 uid="uid://c8lrwo4gqq1jx"]
 
-[ext_resource type="Texture2D" uid="uid://daga2k1v7bahx" path="res://assets/sprites/escenario/spritesheet.png" id="1_3mjvn"]
+[ext_resource type="Texture2D" uid="uid://jywjl8b83jp8" path="res://assets/sprites/llave/spritesheet.png" id="1_3mjvn"]
+[ext_resource type="Script" uid="uid://brusehddac7bd" path="res://scripts/llave.gd" id="1_edu4s"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_edu4s"]
+atlas = ExtResource("1_3mjvn")
+region = Rect2(183, 0, 183, 436)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vjl7w"]
+atlas = ExtResource("1_3mjvn")
+region = Rect2(366, 0, 183, 436)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mt35k"]
+atlas = ExtResource("1_3mjvn")
+region = Rect2(549, 0, 183, 436)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_08gwn"]
+atlas = ExtResource("1_3mjvn")
+region = Rect2(0, 0, 183, 436)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7w6lp"]
+atlas = ExtResource("1_3mjvn")
+region = Rect2(549, 436, 183, 436)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3p7eo"]
+atlas = ExtResource("1_3mjvn")
+region = Rect2(366, 436, 183, 436)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_h46kp"]
+atlas = ExtResource("1_3mjvn")
+region = Rect2(0, 436, 183, 436)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7he86"]
+atlas = ExtResource("1_3mjvn")
+region = Rect2(183, 436, 183, 436)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_chgtt"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_edu4s")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vjl7w")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mt35k")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_08gwn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7w6lp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3p7eo")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_h46kp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7he86")
+}],
+"loop": 1,
+"name": &"gira",
+"speed": 5.0
+}]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_chgtt"]
-radius = 36.0
-height = 136.0
+radius = 28.0
+height = 152.0
 
 [node name="Llave" type="Area2D" unique_id=1346416997]
+script = ExtResource("1_edu4s")
 
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=181691774]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=2077413933]
 scale = Vector2(0.25, 0.25)
-texture = ExtResource("1_3mjvn")
-hframes = 4
-vframes = 9
-frame = 32
-region_rect = Rect2(0, 1648, 80, 160)
+sprite_frames = SubResource("SpriteFrames_chgtt")
+animation = &"gira"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=112931008]
-position = Vector2(-14, -6)
+position = Vector2(-1, 1)
 scale = Vector2(0.25, 0.25)
 shape = SubResource("CapsuleShape2D_chgtt")

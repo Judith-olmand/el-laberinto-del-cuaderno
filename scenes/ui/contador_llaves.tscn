@@ -1,0 +1,27 @@
+[gd_scene format=3 uid="uid://bksfay80u0kib"]
+
+[ext_resource type="PackedScene" uid="uid://c8lrwo4gqq1jx" path="res://scenes/objetos/llave.tscn" id="1_fqdhw"]
+[ext_resource type="Script" uid="uid://b3naj7dgdb77v" path="res://scripts/contador_llaves.gd" id="1_ysle5"]
+[ext_resource type="FontFile" uid="uid://d0y3gcvxp3bit" path="res://assets/fonts/ArchitectsDaughter.ttf" id="2_xm5fr"]
+
+[node name="contador_llaves" type="Panel" unique_id=476542626]
+offset_right = 150.0
+offset_bottom = 150.0
+script = ExtResource("1_ysle5")
+
+[node name="Label" type="Label" parent="." unique_id=431114130]
+layout_mode = 0
+offset_left = 60.0
+offset_top = 50.0
+offset_right = 135.0
+offset_bottom = 100.0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 8
+theme_override_fonts/font = ExtResource("2_xm5fr")
+theme_override_font_sizes/font_size = 32
+text = "99"
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="Llave" parent="." unique_id=1346416997 instance=ExtResource("1_fqdhw")]
+position = Vector2(33, 65)

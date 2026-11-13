@@ -1,0 +1,66 @@
+[gd_scene format=3 uid="uid://dasnu4rww23ut"]
+
+[ext_resource type="Script" uid="uid://2h6ssg4c0gqq" path="res://scripts/menu_pausa.gd" id="1_inbmx"]
+[ext_resource type="FontFile" uid="uid://d0y3gcvxp3bit" path="res://assets/fonts/ArchitectsDaughter.ttf" id="2_a0umu"]
+[ext_resource type="PackedScene" uid="uid://bksfay80u0kib" path="res://scenes/ui/contador_llaves.tscn" id="3_dktfg"]
+
+[node name="MenuPausa" type="Control" unique_id=460337531]
+process_mode = 3
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1300.0
+offset_bottom = 1450.0
+scale = Vector2(0.898, 1)
+script = ExtResource("1_inbmx")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1079836080]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(1, 1.0011041)
+color = Color(0, 0, 0, 0.29411766)
+
+[node name="CenterContainer" type="CenterContainer" parent="ColorRect" unique_id=592309980]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ColorRect/CenterContainer" unique_id=1574067211]
+custom_minimum_size = Vector2(200, 200)
+layout_mode = 2
+alignment = 1
+
+[node name="PAUSA" type="Label" parent="ColorRect/CenterContainer/VBoxContainer" unique_id=49615695]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_a0umu")
+theme_override_font_sizes/font_size = 32
+text = "PAUSA"
+horizontal_alignment = 1
+
+[node name="MarginContainer" type="MarginContainer" parent="ColorRect/CenterContainer/VBoxContainer" unique_id=1481580342]
+layout_mode = 2
+
+[node name="BotonReanudar" type="Button" parent="ColorRect/CenterContainer/VBoxContainer" unique_id=846000712]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_fonts/font = ExtResource("2_a0umu")
+theme_override_font_sizes/font_size = 32
+text = "REANUDAR"
+
+[node name="BotonQuitar" type="Button" parent="ColorRect/CenterContainer/VBoxContainer" unique_id=224908187]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_a0umu")
+theme_override_font_sizes/font_size = 32
+text = "SALIR"
+
+[node name="contador_llaves" parent="ColorRect" unique_id=476542626 instance=ExtResource("3_dktfg")]
+layout_mode = 0
+
+[connection signal="pressed" from="ColorRect/CenterContainer/VBoxContainer/BotonReanudar" to="." method="_on_boton_reanudar_pressed"]
+[connection signal="pressed" from="ColorRect/CenterContainer/VBoxContainer/BotonQuitar" to="." method="_on_boton_quitar_pressed"]

@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://dfjsf3a8u23rn"]
+
+[ext_resource type="Script" uid="uid://ccnfx213khqdn" path="res://scenes/ui/juego.gd" id="1_3rkbk"]
+[ext_resource type="PackedScene" uid="uid://dbuoqcq1k61s4" path="res://scenes/niveles/nivel_1.tscn" id="2_yxubk"]
+[ext_resource type="PackedScene" uid="uid://dasnu4rww23ut" path="res://scenes/ui/menu_pausa.tscn" id="3_j7gtb"]
+
+[node name="Juego" type="Node" unique_id=1588229688]
+script = ExtResource("1_3rkbk")
+
+[node name="Nivel1" parent="." unique_id=224820559 instance=ExtResource("2_yxubk")]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=851960388]
+
+[node name="MenuPausa" parent="CanvasLayer" unique_id=460337531 instance=ExtResource("3_j7gtb")]
